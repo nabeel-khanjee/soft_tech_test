@@ -1,5 +1,4 @@
-
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class SharedPreferencesUtil {
   final SharedPreferences sharedPreferences;
@@ -77,7 +76,8 @@ class SharedPreferencesUtil {
 
   Future<String> getUserId() async {
     try {
-      return sharedPreferences.getString(SharedPreferenceConstants.userId) ?? '';
+      return sharedPreferences.getString(SharedPreferenceConstants.userId) ??
+          '';
     } catch (e) {
       logger.e(e);
       return '';
@@ -86,7 +86,8 @@ class SharedPreferencesUtil {
 
   Future<void> setUserId(userId) async {
     try {
-      sharedPreferences.setString(SharedPreferenceConstants.userId, userId.toString());
+      sharedPreferences.setString(
+          SharedPreferenceConstants.userId, userId.toString());
     } catch (e) {
       logger.e(e);
     }

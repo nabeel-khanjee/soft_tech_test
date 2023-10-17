@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/prescribed_element_dto.dart';
+import 'package:softtech_test/src/data/dto/prescribed_element_dto.dart';
 
 part 'prescribed_dto.g.dart';
 
@@ -36,7 +36,8 @@ class PrescribedDto {
     this.prescriptionElement,
   });
 
-  factory PrescribedDto.fromJson(Map<String, dynamic> json) => _$PrescribedDtoFromJson(json);
+  factory PrescribedDto.fromJson(Map<String, dynamic> json) =>
+      _$PrescribedDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$PrescribedDtoToJson(this);
 }

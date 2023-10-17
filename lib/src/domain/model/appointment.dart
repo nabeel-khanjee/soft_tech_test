@@ -1,5 +1,5 @@
-import 'package:provider_app/src/domain/model/docotor.dart';
-import 'package:provider_app/src/domain/model/prescription.dart';
+import 'package:softtech_test/src/domain/model/docotor.dart';
+import 'package:softtech_test/src/domain/model/prescription.dart';
 
 class Appointment {
   int id;
@@ -22,12 +22,12 @@ class Appointment {
   bool isExpandalbe;
 
   Appointment({
-   required this.prescriptionHere,
+    required this.prescriptionHere,
     required this.id,
     required this.userId,
     required this.doctorId,
     required this.consultationFee,
-     this.appointmentType,
+    this.appointmentType,
     required this.reason,
     required this.type,
     required this.prefix,

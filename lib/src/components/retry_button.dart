@@ -15,7 +15,7 @@ class RetryButton extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Something went wrong try please \ntry again',
             textAlign: TextAlign.center,
             // style: FontStylesConstants.headingThree(color: Colors.black54),
@@ -32,7 +32,7 @@ class RetryButton extends StatelessWidget {
                 ),
                 height: 55,
                 width: double.infinity,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Retry',
                     // style: FontStylesConstants.headingThree(

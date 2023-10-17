@@ -1,25 +1,32 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 part 'animated_drawer_cubit.freezed.dart';
 
 class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   AnimatedDrawerCubit() : super(const _Initial());
 
-  getDashBoardOverview(context,
+  void getDashBoardOverview(context,
       {required PageController pageController,
       required AdvancedDrawerController advancedDrawerController}) {
     _advancedDrawerController = advancedDrawerController;
 
     emit(const _Loading());
     emit(_Loaded(pageController));
+    return;
   }
 
-  Future<void> updateIndex(
+  void updateIndex(
       {required int index,
       required bool isOpen,
-      required AdvancedDrawerController advancedDrawerController}) async {
+      required AdvancedDrawerController advancedDrawerController,
+      PageController? pageController}) {
     _bottomNavIndex = index;
+    !isOpen
+        ? advancedDrawerController.showDrawer()
+        : advancedDrawerController.hideDrawer();
     _advancedDrawerController = advancedDrawerController;
 
+    _pageController.jumpToPage(index);
+    emit(const _Loading());
     emit(
       _AnimatedDrawerIndexUpdated(index, isOpen),
     );
@@ -28,7 +35,7 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   int _bottomNavIndex = 0;
   AdvancedDrawerController _advancedDrawerController =
       AdvancedDrawerController();
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   int get getBottomNavIndex => _bottomNavIndex;
   AdvancedDrawerController get advancedDrawerController =>

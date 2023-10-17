@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class SettingScreenBody extends StatelessWidget {
   const SettingScreenBody({
@@ -9,40 +9,56 @@ class SettingScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextComponentSettingMainHeading(
                 text: StringConstants.generalSettings),
-            SizedBox(height: 16.0),
+            AppTileComponent(
+              isExpandable: false,
+              onTap: () => NavigationUtil.push(
+                  context, RouteConstants.changeLanguageRoute),
+              image: AssetsConstants.chnageLanguageIcon,
+              test: StringConstants.changeLanguage,
+            ),
+            AppTileComponent(
+              isExpandable: false,
+              onTap: () => NavigationUtil.push(
+                  context, RouteConstants.changeLocationRoute),
+              image: AssetsConstants.changeLocationIcon,
+              test: StringConstants.changeLocation,
+            ),
+            TextComponentSettingMainHeading(
+                text: StringConstants.otherSettings),
             ThemeSwitchApp(
+                value: false,
+                image: AssetsConstants.notificationIcon,
+                onChnage: (value) async {},
+                text: StringConstants.notification),
+            ThemeSwitchApp(
+                value: false,
+                image: AssetsConstants.newsLetterIcon,
+                onChnage: (value) async {},
+                text: StringConstants.newsletters),
+            ThemeSwitchApp(
+                value: false,
+                image: AssetsConstants.offersAndPromotionIcon,
+                onChnage: (value) async {},
+                text: StringConstants.offersAndPromotions),
+            ThemeSwitchApp(
+                value: !getThemeStateIsLight(),
                 image: AssetsConstants.lightDarkIcon,
                 onChnage: (value) async {
-                  await switchThemeApp();
+                  switchThemeApp();
+                  BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateStateDarkLight(value: value);
                 },
                 text: StringConstants.themeDarkLight),
-            AppColorPicker(),
-            SelectLanguagesComponent(),
+            const AppColorPicker(),
           ],
         ),
       ),
-    );
-  }
-}
-
-class TextComponentSettingMainHeading extends StatelessWidget {
-  const TextComponentSettingMainHeading({
-    super.key,
-    required this.text,
-  });
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
     );
   }
 }

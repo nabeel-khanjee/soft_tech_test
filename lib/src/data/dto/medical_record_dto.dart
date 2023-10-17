@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/medical_record_file_dto.dart';
-import 'package:provider_app/src/data/dto/share_record_with_doctor_dto.dart';
+import 'package:softtech_test/src/data/dto/medical_record_file_dto.dart';
+import 'package:softtech_test/src/data/dto/share_record_with_doctor_dto.dart';
 
 part 'medical_record_dto.g.dart';
 

@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/package_dto.dart';
+import 'package:softtech_test/src/data/dto/package_dto.dart';
 
 part 'subscription_dto.g.dart';
 
@@ -22,7 +22,8 @@ class SubscriptionDto {
     this.isYearly,
   });
 
-  factory SubscriptionDto.fromJson(Map<String, dynamic> json) => _$SubscriptionDtoFromJson(json);
+  factory SubscriptionDto.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$SubscriptionDtoToJson(this);
 }

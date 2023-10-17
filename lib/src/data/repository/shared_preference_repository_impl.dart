@@ -1,8 +1,8 @@
 import 'package:logger/logger.dart';
-import 'package:provider_app/src/data/common/object_mapper.dart';
+import 'package:softtech_test/src/data/common/object_mapper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPreferenceRepositoryImpl  {
+class SharedPreferenceRepositoryImpl {
   final SharedPreferences sharedPreferences;
   final Logger logger;
   final ObjectMapper objectMapper;
@@ -14,6 +14,4 @@ class SharedPreferenceRepositoryImpl  {
     required this.logger,
     required this.objectMapper,
   });
-
-
 }

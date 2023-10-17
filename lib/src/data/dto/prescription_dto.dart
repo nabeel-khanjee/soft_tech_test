@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/prescribed_dto.dart';
+import 'package:softtech_test/src/data/dto/prescribed_dto.dart';
 
 part 'prescription_dto.g.dart';
 

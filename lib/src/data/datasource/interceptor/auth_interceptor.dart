@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class AuthInterceptor extends InterceptorsWrapper {
   static const requiresAuth = 'requiresAuthentication';
@@ -30,12 +30,18 @@ class AuthInterceptor extends InterceptorsWrapper {
       );
 
       options.headers['Authorization'] = authToken;
-      options.headers['locale'] = BlocProvider.of<AppCubit>(navigationService!.navigatorKey.currentContext!).isUrdu(navigationService!.navigatorKey.currentContext!.locale.toString())==true?2:1;
+      options.headers['locale'] = BlocProvider.of<AppCubit>(
+                      navigationService!.navigatorKey.currentContext!)
+                  .isUrdu(navigationService!.navigatorKey.currentContext!.locale
+                      .toString()) ==
+              true
+          ? 2
+          : 1;
       // options.headers['locale'] =2;
-      options .headers['device'] = Platform.isIOS
+      options.headers['device'] = Platform.isIOS
           ? AppConstants.iosPlatform
           : AppConstants.androidPlatform;
-      
+
       options.headers['platform'] = 'app';
       options.headers['user-id'] = userId.isNotEmpty ? userId : '0';
 
@@ -46,7 +52,8 @@ class AuthInterceptor extends InterceptorsWrapper {
   }
 
   @override
-  Future<void> onError(DioException err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(
+      DioException err, ErrorInterceptorHandler handler) async {
     if (err.response?.statusCode == 401 /* unauthorized */) {
       // await _preferences.clearSession();
     }

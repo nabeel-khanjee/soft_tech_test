@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:provider_app/src/di/injector.dart';
-import 'package:provider_app/src/network/dio_network/dio_client_network.dart';
+import 'package:softtech_test/src/di/injector.dart';
+import 'package:softtech_test/src/network/dio_network/dio_client_network.dart';
 
 class DioApiServices {
   String? authToken;
@@ -187,13 +187,13 @@ class DioApiServices {
 abstract class NetworkExceptions {
   static Future<Map<String, dynamic>> getDioException(
     Object error,
-    Function() _onAPIErrorDetection,
+    Function() onAPIErrorDetection,
   ) async {
     try {
       if (error is DioException && error.error is! SocketException) {
         switch (error.response?.statusCode) {
           case 403:
-            await _onAPIErrorDetection();
+            await onAPIErrorDetection();
             return {
               'status': false,
               'message': "StringConstants.loginExpired",

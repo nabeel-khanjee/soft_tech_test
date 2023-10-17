@@ -1,19 +1,24 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // final OnboardingScreenArgs args;
 
-  const OnboardingScreen({super.key, });
+  const OnboardingScreen({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MainScaffold(
+      isGradient: false,
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
               AssetsConstants.doctorImageOnboardingScreen,
-              fit: BoxFit.fitHeight,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
             ),
           ),
           Container(
@@ -28,29 +33,28 @@ class OnboardingScreen extends StatelessWidget {
                 darken(getThemeColor(context), 0.4).withOpacity(0.1),
               ],
             )),
-            padding: EdgeInsets.all(AppConstants.kDefaultPadding),
+            padding: const EdgeInsets.all(AppConstants.kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Container(
-                  child: Text(
-                    StringConstants.onboardingText,
-                    style: FontStylesConstants.nonito(
-                      fontSize: 30,
-                      color: ColorConstants.white,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    textAlign: TextAlign.center,
+                Text(
+                  StringConstants.onboardingText,
+                  style: FontStylesConstants.gilroy(
+                    fontFamily: FontConstantc.gilroyRegular,
+                    fontSize: 30,
+                    color: ColorConstants.white,
+                    fontWeight: FontWeight.w400,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          NavigationUtil.push(
+                          NavigationUtil.popAllAndPush(
                             context,
                             RouteConstants.homeRoute,
                           );
@@ -60,26 +64,41 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-          Align(
-            alignment: Alignment.topRight,
-            child: Padding(
-              padding: const EdgeInsets.all(
-                AppConstants.kDefaultPadding + AppConstants.kDefaultPadding,
-              ),
-              child: InkWell(
-                onTap: () {
-                  NavigationUtil.push(context, RouteConstants.settingRoute,
-                      );
-                },
-                child: Icon(
-                  Icons.settings,
-                  color: ColorConstants.white,
-                  size: 40,
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          NavigationUtil.push(
+                            context,
+                            RouteConstants.signInRoute,
+                          );
+                        },
+                        child: Text(
+                          'Registration',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ),
+                    ),
+                    // const SizedBox(width: 20),
+                    // Expanded(
+                    //   child: ElevatedButton(
+                    //     onPressed: () {
+                    //       NavigationUtil.push(
+                    //         context,
+                    //         RouteConstants.emergencyRoute,
+                    //       );
+                    //     },
+                    //     child: Text(
+                    //       'Emergency',
+                    //       style: Theme.of(context).textTheme.bodyMedium,
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
                 ),
-              ),
+              ],
             ),
           ),
         ],

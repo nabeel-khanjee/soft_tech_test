@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/last_health_scan_dto.dart';
-import 'package:provider_app/src/data/dto/prescription_dto.dart';
-import 'package:provider_app/src/data/dto/subscription_dto.dart';
+import 'package:softtech_test/src/data/dto/last_health_scan_dto.dart';
+import 'package:softtech_test/src/data/dto/prescription_dto.dart';
+import 'package:softtech_test/src/data/dto/subscription_dto.dart';
 
 part 'dashboard_overview_dto.g.dart';
 

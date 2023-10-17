@@ -1,5 +1,4 @@
-
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class HomePageFloatingButton extends StatelessWidget {
   const HomePageFloatingButton({
@@ -13,4 +12,3 @@ class HomePageFloatingButton extends StatelessWidget {
     );
   }
 }
-

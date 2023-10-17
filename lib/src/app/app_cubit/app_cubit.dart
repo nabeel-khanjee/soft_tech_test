@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:provider_app/src/domain/model/user.dart';
-import 'package:provider_app/src/util/logger_utils.dart';
-import 'package:provider_app/src/wrapper/navigation_wrapper.dart';
-import 'package:provider_app/src/wrapper/setting_wrapper.dart';
+import 'package:softtech_test/src/domain/model/user.dart';
+import 'package:softtech_test/src/util/logger_utils.dart';
+import 'package:softtech_test/src/wrapper/navigation_wrapper.dart';
+import 'package:softtech_test/src/wrapper/setting_wrapper.dart';
 
 part 'app_state.dart';
 

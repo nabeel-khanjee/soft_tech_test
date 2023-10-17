@@ -1,7 +1,14 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
-getCurrentLanguageDirection() =>
-    (navigationService!.navigatorKey.currentContext!.locale.toString() ==
-            'hi_IN' ||
-        navigationService!.navigatorKey.currentContext!.locale.toString() ==
-            'ur_PK');
+bool getCurrentLanguageDirection() {
+  if (navigationService!.navigatorKey.currentContext!.locale.toString() ==
+      'ur_PK') {
+    return true;
+  } else if (navigationService!.navigatorKey.currentContext!.locale
+          .toString() ==
+      'ar_AE') {
+    return true;
+  } else {
+    return false;
+  }
+}

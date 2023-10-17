@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:provider_app/src/domain/model/last_health_scan.dart';
-import 'package:provider_app/src/domain/model/prescription.dart';
-import 'package:provider_app/src/domain/model/subscription.dart';
+import 'package:softtech_test/src/domain/model/last_health_scan.dart';
+import 'package:softtech_test/src/domain/model/prescription.dart';
+import 'package:softtech_test/src/domain/model/subscription.dart';
 
 class AnimatedDrawer extends Equatable {
   final int healthScans;

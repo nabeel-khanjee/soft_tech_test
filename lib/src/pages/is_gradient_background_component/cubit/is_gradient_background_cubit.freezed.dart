@@ -23,6 +23,7 @@ mixin _$IsGradientBackgroundState {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +33,7 @@ mixin _$IsGradientBackgroundState {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,7 @@ mixin _$IsGradientBackgroundState {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,7 @@ mixin _$IsGradientBackgroundState {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,7 @@ mixin _$IsGradientBackgroundState {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +74,7 @@ mixin _$IsGradientBackgroundState {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -135,6 +141,7 @@ class _$_Initial implements _Initial {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) {
     return initial();
   }
@@ -147,6 +154,7 @@ class _$_Initial implements _Initial {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) {
     return initial?.call();
   }
@@ -159,6 +167,7 @@ class _$_Initial implements _Initial {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -175,6 +184,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) {
     return initial(this);
   }
@@ -187,6 +197,7 @@ class _$_Initial implements _Initial {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) {
     return initial?.call(this);
   }
@@ -199,6 +210,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -254,6 +266,7 @@ class _$_Loading implements _Loading {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) {
     return loading();
   }
@@ -266,6 +279,7 @@ class _$_Loading implements _Loading {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) {
     return loading?.call();
   }
@@ -278,6 +292,7 @@ class _$_Loading implements _Loading {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -294,6 +309,7 @@ class _$_Loading implements _Loading {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) {
     return loading(this);
   }
@@ -306,6 +322,7 @@ class _$_Loading implements _Loading {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) {
     return loading?.call(this);
   }
@@ -318,6 +335,7 @@ class _$_Loading implements _Loading {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -398,6 +416,7 @@ class _$_Error implements _Error {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) {
     return error(message);
   }
@@ -410,6 +429,7 @@ class _$_Error implements _Error {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) {
     return error?.call(message);
   }
@@ -422,6 +442,7 @@ class _$_Error implements _Error {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -438,6 +459,7 @@ class _$_Error implements _Error {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) {
     return error(this);
   }
@@ -450,6 +472,7 @@ class _$_Error implements _Error {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) {
     return error?.call(this);
   }
@@ -462,6 +485,7 @@ class _$_Error implements _Error {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -521,6 +545,7 @@ class _$_Loaded implements _Loaded {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) {
     return loaded();
   }
@@ -533,6 +558,7 @@ class _$_Loaded implements _Loaded {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) {
     return loaded?.call();
   }
@@ -545,6 +571,7 @@ class _$_Loaded implements _Loaded {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -561,6 +588,7 @@ class _$_Loaded implements _Loaded {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) {
     return loaded(this);
   }
@@ -573,6 +601,7 @@ class _$_Loaded implements _Loaded {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) {
     return loaded?.call(this);
   }
@@ -585,6 +614,7 @@ class _$_Loaded implements _Loaded {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -667,6 +697,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     required TResult Function(String message) error,
     required TResult Function() loaded,
     required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
   }) {
     return updateColorState(color);
   }
@@ -679,6 +710,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     TResult? Function(String message)? error,
     TResult? Function()? loaded,
     TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
   }) {
     return updateColorState?.call(color);
   }
@@ -691,6 +723,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     TResult Function(String message)? error,
     TResult Function()? loaded,
     TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (updateColorState != null) {
@@ -707,6 +740,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
   }) {
     return updateColorState(this);
   }
@@ -719,6 +753,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
   }) {
     return updateColorState?.call(this);
   }
@@ -731,6 +766,7 @@ class _$_UpdateColorState implements _UpdateColorState {
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
     required TResult orElse(),
   }) {
     if (updateColorState != null) {
@@ -746,5 +782,162 @@ abstract class _UpdateColorState implements IsGradientBackgroundState {
   Color get color;
   @JsonKey(ignore: true)
   _$$_UpdateColorStateCopyWith<_$_UpdateColorState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_UpdateThemeStateCopyWith<$Res> {
+  factory _$$_UpdateThemeStateCopyWith(
+          _$_UpdateThemeState value, $Res Function(_$_UpdateThemeState) then) =
+      __$$_UpdateThemeStateCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool value});
+}
+
+/// @nodoc
+class __$$_UpdateThemeStateCopyWithImpl<$Res>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_UpdateThemeState>
+    implements _$$_UpdateThemeStateCopyWith<$Res> {
+  __$$_UpdateThemeStateCopyWithImpl(
+      _$_UpdateThemeState _value, $Res Function(_$_UpdateThemeState) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_UpdateThemeState(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateThemeState implements _UpdateThemeState {
+  const _$_UpdateThemeState(this.value);
+
+  @override
+  final bool value;
+
+  @override
+  String toString() {
+    return 'IsGradientBackgroundState.updateStateDarkLight(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateThemeState &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateThemeStateCopyWith<_$_UpdateThemeState> get copyWith =>
+      __$$_UpdateThemeStateCopyWithImpl<_$_UpdateThemeState>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
+    required TResult Function(bool value) updateStateDarkLight,
+  }) {
+    return updateStateDarkLight(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
+    TResult? Function(bool value)? updateStateDarkLight,
+  }) {
+    return updateStateDarkLight?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
+    TResult Function(bool value)? updateStateDarkLight,
+    required TResult orElse(),
+  }) {
+    if (updateStateDarkLight != null) {
+      return updateStateDarkLight(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_UpdateColorState value) updateColorState,
+    required TResult Function(_UpdateThemeState value) updateStateDarkLight,
+  }) {
+    return updateStateDarkLight(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_UpdateColorState value)? updateColorState,
+    TResult? Function(_UpdateThemeState value)? updateStateDarkLight,
+  }) {
+    return updateStateDarkLight?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_UpdateColorState value)? updateColorState,
+    TResult Function(_UpdateThemeState value)? updateStateDarkLight,
+    required TResult orElse(),
+  }) {
+    if (updateStateDarkLight != null) {
+      return updateStateDarkLight(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateThemeState implements IsGradientBackgroundState {
+  const factory _UpdateThemeState(final bool value) = _$_UpdateThemeState;
+
+  bool get value;
+  @JsonKey(ignore: true)
+  _$$_UpdateThemeStateCopyWith<_$_UpdateThemeState> get copyWith =>
       throw _privateConstructorUsedError;
 }

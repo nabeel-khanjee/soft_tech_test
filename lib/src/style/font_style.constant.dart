@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class FontStylesConstants {
   ///Noto Naskh Arabic
@@ -8,30 +8,32 @@ class FontStylesConstants {
           FontWeight fontWeight = FontWeight.normal,
           TextDecoration decoration = TextDecoration.none,
           double letterSpacing = 0,
-          double height = 1.1,
+          double height = 0,
           bool isBaseLine = false}) =>
       GoogleFonts.notoNaskhArabic(
         color: color,
         fontWeight: fontWeight,
         fontStyle: FontStyle.normal,
         fontSize: 14,
-        height: 1.4,
+        height: height,
         letterSpacing: letterSpacing,
       );
-  static TextStyle nonito(
+  static TextStyle gilroy(
           {required double fontSize,
+          String? fontFamily,
           Color? color,
           FontWeight fontWeight = FontWeight.normal,
           TextDecoration decoration = TextDecoration.none,
           double letterSpacing = 0,
-          double height = 1.1,
+          double height = 0,
           bool isBaseLine = false}) =>
-      GoogleFonts.nunito(
+      TextStyle(
         color: color,
         fontWeight: fontWeight,
         fontStyle: FontStyle.normal,
+        fontFamily: fontFamily ?? FontConstantc.gilroyRegular,
         fontSize: fontSize,
-        height: 1.4,
+        height: height,
         letterSpacing: letterSpacing,
       );
 }

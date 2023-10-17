@@ -1,4 +1,8 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/gad_7/cubit/gad_7_cubit.dart';
+import 'package:softtech_test/src/pages/product_detail/cubit/product_detail_cubit.dart';
+import 'package:softtech_test/src/pages/products/cubit/products_list_cubit.dart';
+import 'package:softtech_test/src/pages/sign_in/cubit/sign_in_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -27,6 +31,11 @@ void _injectUtilities({
 void _injectBlocsAndCubits() {
   getIt.registerFactory(() => AnimatedDrawerCubit());
   getIt.registerFactory(() => IsGradientBackgroundCubit());
+  getIt.registerFactory(() => PHQ9Cubit());
+  getIt.registerFactory(() => ProductsListCubit(getIt.get()));
+  getIt.registerFactory(() => ProductDetailCubit(getIt.get()));
+  getIt.registerFactory(() => SignInCubit(getIt.get()));
+  getIt.registerFactory(() => GAD7Cubit());
 }
 
 Future<void> _initializeData({bool enableLogging = true}) async {
@@ -48,11 +57,11 @@ Future<void> _initializeData({bool enableLogging = true}) async {
   final dio = Dio(
     BaseOptions(
       baseUrl: HttpConstants.base,
-      receiveTimeout: Duration(seconds: 60000),
+      receiveTimeout: const Duration(seconds: 60000),
       // 1 minute
-      connectTimeout: Duration(seconds: 60000),
+      connectTimeout: const Duration(seconds: 60000),
       // 1 minute
-      sendTimeout: Duration(seconds: 60000),
+      sendTimeout: const Duration(seconds: 60000),
       // 1 minute
       contentType: 'application/json',
     ),
@@ -61,10 +70,10 @@ Future<void> _initializeData({bool enableLogging = true}) async {
   // inject dependencies
   getIt
     ..registerSingleton(DioClientNetwork(dio))
-    ..registerSingleton(ATCareApi(dio))
+    ..registerSingleton(SoftTechTestApi(dio))
     ..registerFactory<ApiRepository>(
       () => ApiRepositoryImpl(
-        atCareApi: getIt.get(),
+        softTechTestApi: getIt.get(),
         objectMapper: getIt.get(),
         logger: getIt.get(),
       ),

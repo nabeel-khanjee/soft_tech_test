@@ -58,7 +58,7 @@ class Data {
 
   Data.fromJson(dynamic json) {
     _settings = json['settings'] != null ? Settings.fromJson(json['settings']) : null;
-_topBarText =json['top_bar_text']!=null?json['top_bar_text']:null;
+_topBarText =json['top_bar_text'];
     
   }
   

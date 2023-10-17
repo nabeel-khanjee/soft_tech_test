@@ -1,10 +1,12 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({
     super.key,
     required this.snap,
+    this.color,
   });
+  final Color? color;
   final bool snap;
 
   final _advancedDrawerController = AdvancedDrawerController();
@@ -20,24 +22,16 @@ class HomeScreenComponent extends StatelessWidget {
         builder: (context, state) => state.maybeWhen(
           loaded: (
             pageControllerLoaded,
-          ) {
-            return AnimatedDrawerAfterLoadedState();
-          },
+          ) =>
+              AnimatedDrawerAfterLoadedState(
+            color: color ?? getThemeColor(context),
+          ),
           animatedDrawerIndexUpdated: (
             index,
             isOpen,
           ) {
-            BlocProvider.of<AnimatedDrawerCubit>(context)
-                .pageController
-                .jumpToPage(index);
-            isOpen
-                ? BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController
-                    .hideDrawer()
-                : BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController
-                    .showDrawer();
-            return AnimatedDrawerAfterLoadedState();
+            return AnimatedDrawerAfterLoadedState(
+                color: color ?? getThemeColor(context));
           },
           error: (error) => RetryButton(
             onTap: () => context
@@ -46,10 +40,18 @@ class HomeScreenComponent extends StatelessWidget {
                     pageController: PageController(initialPage: 0),
                     advancedDrawerController: _advancedDrawerController),
           ),
-          loading: () => AppProgressIndicator(),
+          loading: () => const AppProgressIndicator(),
           orElse: () => const SizedBox.shrink(),
         ),
       ),
     );
   }
+}
+
+class TopBarList {
+  final String icon;
+  final String text;
+  final int pageIndex;
+
+  TopBarList({required this.icon, required this.text, required this.pageIndex});
 }

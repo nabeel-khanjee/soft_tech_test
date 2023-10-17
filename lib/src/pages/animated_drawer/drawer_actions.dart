@@ -1,13 +1,17 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
-drawerStateChnageUpdateIndex(
+AnimatedDrawerCubit drawerStateChnageUpdateIndex(
         {int? index,
         required bool isOpen,
-        required AdvancedDrawerController advancedDrawerController,
-        required BuildContext context}) async =>
-    await BlocProvider.of<AnimatedDrawerCubit>(context)
+        AdvancedDrawerController? advancedDrawerController,
+        PageController? pageController,
+        required BuildContext context}) =>
+    BlocProvider.of<AnimatedDrawerCubit>(context)
       ..updateIndex(
-        advancedDrawerController: advancedDrawerController,
+          pageController: pageController,
+          advancedDrawerController: advancedDrawerController ??
+              BlocProvider.of<AnimatedDrawerCubit>(context)
+                  .advancedDrawerController,
           index: index ??
               BlocProvider.of<AnimatedDrawerCubit>(context).getBottomNavIndex,
           isOpen: isOpen);

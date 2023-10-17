@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:provider_app/src/data/dto/last_health_scan_dto.dart';
+import 'package:softtech_test/src/data/dto/last_health_scan_dto.dart';
 
 part 'sehat_scan_history_dto.g.dart';
 

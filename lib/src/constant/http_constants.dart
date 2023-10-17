@@ -1,7 +1,7 @@
 class HttpConstants {
-  static const String baseUrlArticle = 'http://192.168.18.129:8000/api';
-  static const String base = 'http://192.168.18.129:8000/api';
-  static const String urlBase = 'http://192.168.18.129:8000/api';
+  static const String baseUrlArticle = 'https://fakestoreapi.com/';
+  static const String base = 'https://fakestoreapi.com/';
+  static const String urlBase = 'https://fakestoreapi.com/';
   static const String downloadRecipt = 'payment-receipt-download';
   static const String token = 'get/token';
   static const String login = 'login';

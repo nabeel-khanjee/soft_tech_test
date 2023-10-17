@@ -1,7 +1,9 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key, });
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -9,9 +11,18 @@ class HomeScreen extends StatelessWidget {
 
     return flavorBanner(
       show: true,
-      child: HomeScreenComponent(
-        snap: snap,
-      ),
+      child: BlocProvider(
+          create: (context) => getIt.get<IsGradientBackgroundCubit>()
+            ..updateState(color: getThemeColor(context)),
+          child:
+              BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
+            builder: (context, state) => state.maybeWhen(
+              orElse: () => HomeScreenComponent(
+                snap: snap,
+              ),
+              updateColorState: (color) => HomeScreenComponent(snap: snap),
+            ),
+          )),
     );
   }
 }

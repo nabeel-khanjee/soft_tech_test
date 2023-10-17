@@ -1,4 +1,4 @@
-package com.example.provider_app
+package com.example.softtecg_test
 
 import io.flutter.embedding.android.FlutterActivity
 

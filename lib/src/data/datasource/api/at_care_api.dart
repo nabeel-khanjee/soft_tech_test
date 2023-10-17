@@ -4,17 +4,19 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 // ignore: depend_on_referenced_packages
 import 'package:http_parser/http_parser.dart';
-import 'package:provider_app/src/data/dto/appointments_history_dto.dart';
-import 'package:provider_app/src/data/dto/base_response_dto.dart';
-import 'package:provider_app/src/data/dto/dashboard_overview_dto.dart';
-import 'package:provider_app/src/data/dto/data_list_dto.dart';
-import 'package:provider_app/src/data/dto/doctor_dto.dart';
-import 'package:provider_app/src/data/dto/medical_records_history_dto.dart';
-import 'package:provider_app/src/data/dto/sehat_scan_history_dto.dart';
+import 'package:softtech_test/src/data/dto/appointments_history_dto.dart';
+import 'package:softtech_test/src/data/dto/base_response_dto.dart';
+import 'package:softtech_test/src/data/dto/dashboard_overview_dto.dart';
+import 'package:softtech_test/src/data/dto/data_list_dto.dart';
+import 'package:softtech_test/src/data/dto/doctor_dto.dart';
+import 'package:softtech_test/src/data/dto/medical_records_history_dto.dart';
+import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/data/dto/sehat_scan_history_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
 
 ///
 ///
-class ATCareApi {
+class SoftTechTestApi {
   static const String kRouteDashboardOverview = 'dashboard';
   static const String kRouteSehatScanHistory = 'health-scan';
   static const String kRoutePastAppointments = 'appointment';
@@ -26,6 +28,12 @@ class ATCareApi {
   static const String kRouteMedicalRecordsDownloadRecord =
       'medical-record/download-medical-record-pdf';
 
+  static String kRouteGetProducts = 'products';
+
+  static String kRouteAuthLogin = 'auth/login';
+
+  static String kRouteGetProductDetail(int id) => '$kRouteGetProducts/$id';
+
   static String kRouteDeleteMedicalRecord(int id) =>
       '$kRouteMedicalRecords/$id';
   static String kRouteDeleteMedicalRecordFile(int id) =>
@@ -35,7 +43,7 @@ class ATCareApi {
 
   final Dio dio;
 
-  const ATCareApi(this.dio);
+  const SoftTechTestApi(this.dio);
 
   ///
   ///  customer Dashboard Overview
@@ -254,5 +262,30 @@ class ATCareApi {
       kRouteDownloadRecord(medicalRecordId),
     );
     return;
+  }
+
+  Future<BaseResponseDto<TokenDto>> signIn(
+      {required String userName, required String password}) async {
+    final response = await dio.post(kRouteAuthLogin,
+        data: {'username': userName, 'password': password});
+    return BaseResponseDto.fromJson({"data": response.data},
+        (value) => TokenDto.fromJson(value as Map<String, dynamic>));
+  }
+
+  Future<BaseResponseDto<ProductDto>> getProductDetails(int id) async {
+    final response = await dio.get(kRouteGetProductDetail(id));
+    return BaseResponseDto.fromJson({'data': response.data},
+        (value) => ProductDto.fromJson(value as Map<String, dynamic>));
+  }
+
+  Future<DataListDto<ProductDto>> getProducts(int limit) async {
+    final response =
+        await dio.get(kRouteGetProducts, queryParameters: {'limit': limit});
+    return DataListDto.fromJson(
+      {'data': response.data},
+      (value) => ProductDto.fromJson(
+        value as Map<String, dynamic>,
+      ),
+    );
   }
 }

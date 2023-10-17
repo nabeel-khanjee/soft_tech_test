@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g data-name="vuesax/linear/calendar">
+        <path d="M0 0v2.711" transform="translate(6.667 1.807)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M0 0v2.711" transform="translate(13.333 1.807)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M0 0h13.674" transform="translate(3.163 7.575)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M14.578 4.022v6.838c0 2.413-1.215 4.022-4.049 4.022h-6.48C1.215 14.882 0 13.273 0 10.86V4.022C0 1.609 1.215 0 4.049 0h6.479c2.835 0 4.05 1.609 4.05 4.022z" transform="translate(2.711 3.31)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(12.584 10.917)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(12.584 13.417)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(9.501 10.917)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(9.501 13.417)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(6.417 10.917)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="Vector" d="M.495.5H.5" transform="translate(6.417 13.417)" style="stroke:#8593a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+    </g>
+</svg>

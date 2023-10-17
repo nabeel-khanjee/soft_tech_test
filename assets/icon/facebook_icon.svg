@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+    <defs>
+        <filter id="m709m15dna" x="0" y="0" width="77" height="77" filterUnits="userSpaceOnUse">
+            <feOffset dy="5"/>
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feFlood flood-opacity=".051"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Group 16120">
+        <g style="filter:url(#m709m15dna)">
+            <circle data-name="Ellipse 8" cx="31" cy="31" r="31" transform="translate(7.5 2.5)" style="fill:#2d3d68"/>
+        </g>
+        <path data-name="Path 2048" d="M262.831 253.809h-4.417v-3.224c0-.988 1.023-1.218 1.5-1.218h2.853v-4.35L259.5 245c-4.461 0-5.48 3.243-5.48 5.323v3.486h-3.238v4.483h3.238v12.1h4.4v-12.1h3.735z" transform="translate(-218.093 -224.033)" style="fill:#3b5998"/>
+    </g>
+</svg>

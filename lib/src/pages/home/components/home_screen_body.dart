@@ -1,4 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/home/components/slide_to_action_button_component.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
@@ -7,11 +8,29 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        HomePageAppBar(),
-        HomePageListView(),
-      ],
-    );
+    return MainScaffold(
+        bottomNavigationBar: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: SlideActionBtn(),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            child: const Column(
+              children: [
+                SearchCompoentHome(),
+                HealthConditionsWidget(),
+                UpcommingAppointmentWidgetHome(),
+                TopDatedDoctorsWidget()
+              ],
+            ),
+          ),
+        ),
+        isGradient: false,
+        appBar: AppBarcomponent(
+            isTitleTowLines: true,
+            isGradient: false,
+            title: StringConstants.home,
+            isBackAppBar: false));
   }
 }

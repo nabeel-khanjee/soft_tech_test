@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.5" height="21.5" viewBox="0 0 21.5 21.5">
+    <g data-name="Iconly/Light/Close Square">
+        <g data-name="Close Square">
+            <path data-name="Stroke 1" d="M4.792 0 0 4.792" transform="translate(8.353 8.249)" style="stroke-miterlimit:10;fill:none;stroke:#19284b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+            <path data-name="Stroke 2" d="M4.8 4.8 0 0" transform="translate(8.351 8.247)" style="stroke-miterlimit:10;fill:none;stroke:#19284b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+            <path d="M10 20A10 10 0 1 0 0 10a10.029 10.029 0 0 0 10 10z" transform="translate(.75 .75)" style="fill:none;stroke:#19284b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+        </g>
+    </g>
+</svg>

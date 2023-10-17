@@ -1,5 +1,5 @@
-import 'package:provider_app/src/domain/model/medical_record_file.dart';
-import 'package:provider_app/src/domain/model/shared_with_doctors.dart';
+import 'package:softtech_test/src/domain/model/medical_record_file.dart';
+import 'package:softtech_test/src/domain/model/shared_with_doctors.dart';
 
 class MedicalRecords {
   int id;
@@ -40,4 +40,3 @@ class MedicalRecords {
     return 'MedicalRecords{id: $id, userId: $userId, prescriptionId: $prescriptionId, conditions: $conditions, fileName: $fileName, checkBoxValue: $checkBoxValue, totalReports: $totalReports, sharedWithDoctorsCount: $sharedWithDoctorsCount, reportsForUser: $reportsForUser, date: $date, status: $status, isExpanded: $isExpanded, sharedWithDoctors: $sharedWithDoctors, medicalRecordFiles: $medicalRecordFiles,createdAt:$createdAt}';
   }
 }
-
