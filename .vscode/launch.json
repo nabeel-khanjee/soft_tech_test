@@ -5,31 +5,31 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "at_care",
+      "name": "soft_tech_test",
       "request": "launch",
       "type": "dart"
     },
     {
-      "name": "at_care (profile mode)",
+      "name": "soft_tech_test (profile mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile"
     },
     {
-      "name": "at_care (release mode)",
+      "name": "soft_tech_test (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"
     },
     {
-      "name": "at_care_prod",
+      "name": "soft_tech_test_prod",
       "request": "launch",
       "type": "dart",
       "program": "lib/src/flavors/main_prod.dart",
       "args": ["--flavor", "prod"]
     },
     {
-      "name": "at_care_prod (profile mode)",
+      "name": "soft_tech_test_prod (profile mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile",
@@ -38,7 +38,7 @@
       "args": ["--flavor", "prod"]
     },
     {
-      "name": "at_care_prod (release mode)",
+      "name": "soft_tech_test_prod (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release",
@@ -47,14 +47,14 @@
       "args": ["--flavor", "prod"]
     },
     {
-      "name": "at_care_staging",
+      "name": "soft_tech_test_staging",
       "request": "launch",
       "type": "dart",
       "program": "lib/src/flavors/main_staging.dart",
       "args": ["--flavor", "staging"]
     },
     {
-      "name": "at_care_staging (profile mode)",
+      "name": "soft_tech_test_staging (profile mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile",
@@ -63,7 +63,7 @@
       "args": ["--flavor", "staging"]
     },
     {
-      "name": "at_care_staging (release mode)",
+      "name": "soft_tech_test_staging (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release",
